@@ -13,7 +13,6 @@ int  findDeterminant(int matrix[N][N]);
 void inverseMarrix(int matrix[N][N], int inverse[N][N], int det);
 
 int main(void)  {
-    puts(Red"\nCreator: Vlasenko Max | KPI | First course | cypher Hilla"Res); 
     int i, j, k, b, var; char cypher[100]; // max.lenght шифра
 
     char Array[Alphabet] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z', ' ', '.'};
@@ -41,7 +40,7 @@ int main(void)  {
     printf("\nРозшифровать"Blue" <1>"Res" | Зашифровать "Blue"<2>"Res": ");
     scanf("%d", &var);
     if (var == 1) {
-        decryption(inverse, key, res, s); // ГЛАВНОЕ
+        decryption(inverse, key, res, s);
         printf(Blue"\nРозшифроване повідомлення:\n"Res);
     }
     if (var == 2) {
@@ -100,9 +99,9 @@ void inverseMarrix(int matrix[N][N], int inverse[N][N], int det) {
             _Exit(0);
         }
                                     
-    for (int i = 0; i < N; i++) {                 // НАЙТИ k, при котором temp целое
-        for (int j = 0; j < N; j++) {             // temp / det
-            for (int k = 1; ; k++){ 
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {       
+            for (int k = 1; ; k++){
                 int temp = 0;
                 if (det > 0) {
                     temp = (inverse[i][j] + Alphabet * k);
